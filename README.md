@@ -1,4 +1,4 @@
-# DSA Topics Hot Questions
+# 🚀 DSA Topics Hot Questions 🔥
 
 - All questions are solved in javascript
 - It contains all time popular DSA questions list for each topic
