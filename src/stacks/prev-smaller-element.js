@@ -20,4 +20,4 @@ function prevSmallerElement(array = []) {
   return smallerElements;
 }
 
-console.log(prevSmallerElement([2, 3, 4]));
+console.log(prevSmallerElement([2,3,8,7,5]));

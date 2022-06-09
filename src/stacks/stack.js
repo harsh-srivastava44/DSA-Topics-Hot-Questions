@@ -1,6 +1,6 @@
 export default class Stack {
   #arr;
-  constructor(size) {
+  constructor(size = 10001) {
     this.size = size;
     this.top = -1;
     this.#arr = [];
@@ -30,5 +30,8 @@ export default class Stack {
   }
   isEmpty() {
     return this.top === -1 ? true : false;
+  }
+  getSize() {
+    return this.#arr.length;
   }
 }
