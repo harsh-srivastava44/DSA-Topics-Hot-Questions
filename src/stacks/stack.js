@@ -1,37 +1,57 @@
+// program to implement stack data structure
 export default class Stack {
-  #arr;
-  constructor(size = 10001) {
-    this.size = size;
-    this.top = -1;
-    this.#arr = [];
+  constructor() {
+    this.items = [];
   }
-  push(element) {
-    if (this.size - this.top > 1) {
-      this.top++;
-      this.#arr[this.top] = element;
-    } else {
-      console.log("Stack Overflow");
+
+  // add element to the stack
+  add(element) {
+    return this.items.push(element);
+  }
+
+  // remove element from the stack
+  remove() {
+    if (this.items.length > 0) {
+      return this.items.pop();
     }
   }
-  pop() {
-    if (this.top >= 0) {
-      this.top--;
-      return this.#arr.pop();
-    } else {
-      // console.log("Stack is empty");
-    }
+
+  // view the last element
+  peek() {
+    return this.items[this.items.length - 1];
   }
-  peak() {
-    if (this.top >= 0 && this.top < this.size) {
-      return this.#arr[this.top];
-    } else {
-      console.log("stack is empty");
-    }
-  }
+
+  // check if the stack is empty
   isEmpty() {
-    return this.top === -1 ? true : false;
+    return this.items.length === 0;
   }
-  getSize() {
-    return this.#arr.length;
+
+  // the size of the stack
+  size() {
+    return this.items.length;
+  }
+
+  // empty the stack
+  clear() {
+    this.items = [];
   }
 }
+
+// let stack = new Stack();
+// stack.add(1);
+// stack.add(2);
+// stack.add(4);
+// stack.add(8);
+// console.log(stack.items);
+
+// stack.remove();
+// console.log(stack.items);
+
+// console.log(stack.peek());
+
+// console.log(stack.isEmpty());
+
+// console.log(stack.size());
+
+// stack.clear();
+// console.log(stack.items);
